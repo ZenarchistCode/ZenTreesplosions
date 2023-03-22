@@ -8,7 +8,9 @@ There is a JSON config that allows you to specify the blast radius and what tree
 
 Installation Instructions:
 
-Install this mod like any other mod - copy it into your server folder and add it to your mods list. It must be run on both server and client. Make sure to copy the .bikey into your server keys if you're not using a server management tool like OmegaManager which does that automatically.
+Install this mod like any other mod - copy it into your server folder and add it to your mods list. Make sure to copy the .bikey into your server keys if you're not using a server management tool like OmegaManager which does that automatically.
+
+This mod should theoretically work fine as a server-side only mod, but if you have any issues then add it to your server's mod pack.
 
 When you run the mod for the first time a default JSON config will be created in your server profile: %server_root%/profiles/Zenarchist/ZenTreesplosionsConfig.json
 
