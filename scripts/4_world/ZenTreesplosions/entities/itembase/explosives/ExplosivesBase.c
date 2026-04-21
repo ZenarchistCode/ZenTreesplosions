@@ -6,7 +6,7 @@ modded class ExplosivesBase
 
 		#ifdef SERVER
 		//! TREESPLOSIONS
-		#ifdef ZENMODPACK
+		#ifdef ZenModPack
 		if (!ZenModEnabled("ZenTreesplosions"))
 			return;
 		#endif

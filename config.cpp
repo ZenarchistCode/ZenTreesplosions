@@ -1,14 +1,16 @@
+/*
+	(c) 2026 | ZenTreesplosions | Zenarchist
+*/
+
 class CfgPatches
 {
 	class ZenTreesplosions
 	{
-		units[]={};
-		weapons[]={};
-		requiredVersion=0.1;
 		requiredAddons[] = 
 		{ 
 			"DZ_Data",
-			"DZ_Scripts"
+			"DZ_Scripts",
+			"ZenModCore"
 		};
 	};
 };
@@ -17,23 +19,11 @@ class CfgMods
 {
 	class ZenTreesplosions
 	{
-		dir="ZenTreesplosions";
-		picture=""; 
-		action="";
-		hideName=1;
-		hidePicture=1;
-		name="ZenTreesplosions";
-		credits=""; 
-		author="Zenarchist";
-		authorID="0";  
-		version="1.0";
-		extra=0;
-		type="mod";
-		dependencies[] =
+		author = "Zenarchist";
+		type = "mod";
+		defines[] = 
 		{
-			"Game",
-			"World",
-			"Mission"
+			//"ZENSKILLSDEBUG"
 		};
 		class defs
 		{
@@ -69,4 +59,14 @@ class CfgMods
 
 class CfgVehicles
 {
+	class Inventory_Base;
+	
+	//! TREESPLOSIONS
+	class Zen40mmTreeKiller : Inventory_Base
+	{
+		scope = 1;
+		model = "\dz\gear\consumables\Stone.p3d";
+		hiddenSelections[] = { "zbytek" };
+		hiddenSelectionsTextures[] = { "#(argb,8,8,3)color(1,1,1,0,CA)" };
+	};
 };

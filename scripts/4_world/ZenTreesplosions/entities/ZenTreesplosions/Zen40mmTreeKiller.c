@@ -4,18 +4,18 @@ class Zen40mmTreeKiller extends Inventory_Base
 	void Zen40mmTreeKiller()
 	{
 		// Delete immediately to trigger tree killing
-		GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(DeleteSafe, 1, false);
+		g_Game.GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(DeleteSafe, 1, false);
 	}
 
 	override void EEDelete(EntityAI parent)
 	{
 		super.EEDelete(parent);
 
-		if (!GetGame().IsDedicatedServer())
+		if (!g_Game.IsDedicatedServer())
 			return;
 
 		vector ourRealPos = GetPosition();
-		ourRealPos[1] = GetGame().SurfaceY(ourRealPos[0], ourRealPos[2]);
+		ourRealPos[1] = g_Game.SurfaceY(ourRealPos[0], ourRealPos[2]);
 
 		TreeKiller.KillTree(ourRealPos, GetType());
 	}
